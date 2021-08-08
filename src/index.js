@@ -11,8 +11,10 @@ module.exports = function toReadable(number) {
         return dozensTwenty[number - 11];
     }
     else if (number < 101) {
-        
-        return dozens[Math.floor(number/10-2)] + " " + units[number%10];
+        if (number%10 == 0){
+            return dozens[Math.floor(number/10-2)]
+        }
+        else return dozens[Math.floor(number/10-2)] + " " + units[number%10];
     }
     else return false;
 }
