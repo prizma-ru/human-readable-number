@@ -15,11 +15,11 @@ module.exports = function toReadable(number) {
         }
         else return dozens[Math.floor(number/10-2)] + " " + units[number%10];
     }
-    else if (number < 999) {
+    else if (number < 1000) {
         if (number%100 == 0){
             return units[Math.floor(number/100)] + " hundred";
         }
-        else return false;
+        else return units[Math.floor(number/100)] + " hundred " + dozens[Math.floor(number%100/10-2)] + " " + units[number%10];  
     }
     else return false;
 }

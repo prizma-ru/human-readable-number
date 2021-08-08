@@ -615,7 +615,7 @@ it('Should return \'one hundred one\' when 101 given', () => {
   assert.equal(readable, 'one hundred one');
 });
 
-/* it('Should return \'one hundred two\' when 102 given', () => {
+it('Should return \'one hundred two\' when 102 given', () => {
   const readable = toReadable(102);
 
   assert.equal(readable, 'one hundred two');
@@ -6002,4 +6002,3 @@ it('Should return \'nine hundred ninety nine\' when 999 given', () => {
 
   assert.equal(readable, 'nine hundred ninety nine');
 });
- */
