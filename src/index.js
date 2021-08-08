@@ -16,6 +16,13 @@ module.exports = function toReadable(number) {
         }
         else return dozens[Math.floor(number/10-2)] + " " + units[number%10];
     }
+    else if (number < 999) {
+        if (number%100 == 0){
+            return dozens[Math.floor(number/100-1)] + "hundred";
+        }
+        else return false;
+    }
+
     else return false;
 }
 
