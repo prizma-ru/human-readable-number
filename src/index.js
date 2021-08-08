@@ -17,7 +17,10 @@ module.exports = function toReadable(number) {
     }
     else if (number < 1000) {
         if (number%100 == 0){
-            return units[Math.floor(number/100)] + " hundred";
+            return units[Math.floor(number/100)] + " hundred"; 
+        }
+        else if (number%100%10 == 0){
+            return units[Math.floor(number/100)] + " hundred " + dozens[Math.floor(number%100/10-2)]; 
         }
         else return units[Math.floor(number/100)] + " hundred " + dozens[Math.floor(number%100/10-2)] + " " + units[number%10];  
     }
